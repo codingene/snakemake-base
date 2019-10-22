@@ -1,7 +1,7 @@
 # snakemake base
 [![Dependency](https://img.shields.io/badge/Dependency-Snakemake≥5.7.0-blue.svg)](https://snakemake.readthedocs.io/en/stable/)
 
-Lately, Smakemake become a favorite workflow management system for most in the bioinformatics community. This repo can serve as a base to start [adding rules/modules](#Adding-Rules/Modules) as per diffrent workflow requirements.
+Lately, Smakemake become a favorite workflow management system for most in the bioinformatics community. This repo can serve as a base to start [adding rules/modules](#adding-rulesmodules) as per diffrent workflow requirements.
 
 Basic read QC step is added which is start point for most of NGS analysis. It accepts both paired-end and single-end reads in fastq(`.fq`) format as mentioned in [units.tsv](units.tsv) file.
 
@@ -57,12 +57,15 @@ Take advantage of followings to write snakemake files.
 ## Use Snakemake Wrappers
 Some commonly used tool can be called directly without writing the full syntax.
 Also the advantage, it will automatically download the corresponding tool wrapper with `--use-conda` flag.
-In details - [The Snakemake Wrappers repository doc](The Snakemake Wrappers repository)
+
+In details - [The Snakemake Wrappers repository doc](https://snakemake-wrappers.readthedocs.io/en/stable/)
 
 ## Use Snakemake APIs
 Snakemake give some API functionality to make life easy to deal with common workflow problems.
+
 In details - [Snakemake-API reference doc](https://snakemake.readthedocs.io/en/stable/api_reference/snakemake.html)
 
 ## Use Snakemeke Utils
 Some addtional utils from snakemake.
+
 In details - [Snakemake Utils doc](https://snakemake.readthedocs.io/en/stable/api_reference/snakemake_utils.html)
