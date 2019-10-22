@@ -1,6 +1,6 @@
-# bacterial_wgs
+# snakemake base
 
-$ TO-DO
+This repo can serve as a base to start adding modules (.smk) files as per any workflow requirements.
 
 # Dependency
 snakemake=5.7.1
