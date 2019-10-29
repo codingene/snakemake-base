@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: snakemake/snakemake-github-action@v1.3.0
+    - uses: snakemake/snakemake-github-action@v1
       with:
         directory: ./
-        args: '--use-conda'
+        args: --use-conda
