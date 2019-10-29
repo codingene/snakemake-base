@@ -6,13 +6,11 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: snakemake/snakemake-github-action@v1.4.0
-    - uses: ./
-      with:
-        directory: ./
-        snakefile: ./Snakefile
-        args: --use-conda
+      - uses: actions/checkout@v1
+      - name: snakemake
+        uses: snakemake/snakemake-github-action@v1.4.0
+        with:
+          directory: ./
+          args: "--use-conda"
