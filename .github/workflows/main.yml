@@ -11,6 +11,7 @@ jobs:
     
     steps:
     - uses: snakemake/snakemake-github-action@v1.4.0
+    - uses: ./
       with:
         directory: ./
         snakefile: ./Snakefile
