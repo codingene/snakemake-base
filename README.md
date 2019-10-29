@@ -72,3 +72,6 @@ In details - [Snakemake-API reference doc](https://snakemake.readthedocs.io/en/s
 Some addtional utils from snakemake.
 
 In details - [Snakemake Utils doc](https://snakemake.readthedocs.io/en/stable/api_reference/snakemake_utils.html)
+
+# Acknowledgement
+The best practices in writing snakemake workflows are taken from [snakemake-workflows](https://github.com/snakemake-workflows).
