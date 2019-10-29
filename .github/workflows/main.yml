@@ -1,16 +1,19 @@
-name: snakemake-base
+name: Tests
 
-on:
+on: 
   - push
   - pull_request
 
 jobs:
-  build:
+  run-workflow:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: snakemake
-        uses: snakemake/snakemake-github-action@v1.4.0
-        with:
-          directory: ./
-          args: "--use-conda"
+    - uses: actions/checkout@v1
+    - name: Checkout submodules
+      uses: textbook/git-checkout-submodule-action@2.0.0
+    - name: snakemake
+      uses: snakemake/snakemake-github-action@v1.2.0
+      with:
+        directory: ./
+        snakefile: ./Snakefile
+        args: "--use-conda"
