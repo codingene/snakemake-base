@@ -1,6 +1,8 @@
 # snakemake base
 [![Dependency](https://img.shields.io/badge/Dependency-Snakemake≥5.7.0-blue.svg)](https://snakemake.readthedocs.io/en/stable/)
 [![Build Status](https://travis-ci.org/codingene/snakemake-base.svg?branch=master)](https://travis-ci.org/codingene/snakemake-base)
+[![CircleCI](https://circleci.com/gh/codingene/snakemake-base.svg?style=svg)](https://circleci.com/gh/codingene/snakemake-base)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=codingene_snakemake-base&metric=alert_status)](https://sonarcloud.io/dashboard?id=codingene_snakemake-base)
 
 Lately, Smakemake become a favorite workflow management system for most in the bioinformatics community. This repo can serve as a base to start [adding rules/modules](#adding-rulesmodules) as per diffrent workflow requirements.
 
