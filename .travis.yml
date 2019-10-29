@@ -3,6 +3,14 @@ python:
   # We don't actually use the Travis Python, but this keeps it organized.
   - "3.6"
 
+dist: trusty
+
+addons:
+  sonarcloud:
+    organization: "codingene"
+    token:
+      secure: "JV2PgVOtDi8y19x7/hURk75B9TaNn/PYTADGcYChqsnh9YgLAXhP3JNVtAzIrKZiCT2KmKglpGu0P8qtZaOuu9vUi1RoeP+fIxfD2MTScFw8otDyOBYtR5RVTih9n+MGTInHWJXDNppLOGOFzYthejHmdtVOXBKCLqwuUU1RnZ5A6rdgy2oKOPpWG93cM5yBjdN6m0LIwj2pAv6lI1g8rIUZxpG+RP4oVzbFToNbranTzHsiWSSsNaexsXvVq0RpNSymLUkGvZ4NsFcHoKPFsyHP0XzTbwGBAQ+pI7vF006SI4VDCFtN4YxjVhvQ2B48RN29LZ8uP/Q2LopxUsHDuN+tMLh3OlRG9eXIRB7WYmDjZ12sMCrI1ycrvutvml9RQrclkl3Y2ex5rAMALgTPMVIt5ETpmF5rDqwAgOlCmhj51wmnB+s/tkdQJz3sMyBaFvyKJ2bE2L5DCQMDpTS8Q3SWZvkzBggelADa1Nd663B2dT0EzgGaym5WfiwMrgS2kVJBwx41zghFchixfF+wlgCXGa8SiY5bogKesqArzuVLQDVMMqkp62FQ3CmWltU2oLUgHUjY6uxDOBIvXrkouy7MufYoWvAWrqohKEOQdHz9BX9Pw6qvMU9SBzhabEF2h+9imlVuO/PsreQHCIM7aypyug244CQnlEl0h0Rip40=" # encrypted value of your token
+
 install:
   - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
   - bash miniconda.sh -b -p $HOME/miniconda
@@ -22,3 +30,7 @@ script:
   # run the workflow
   #- snakemake --use-conda --directory .test || (for f in .test/logs/*; do echo $f; cat $f; done; for f in .test/logs/*/*; do echo $f; cat $f; done; exit 1)
   - snakemake --use-conda
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - sonar-scanner
